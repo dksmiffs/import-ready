@@ -2,6 +2,7 @@
 [![image](https://img.shields.io/github/release/dksmiffs/importable.svg)](https://github.com/dksmiffs/importable/releases)
 [![image](https://img.shields.io/travis/dksmiffs/importable.svg)](https://travis-ci.org/dksmiffs/importable)
 [![image](https://img.shields.io/codecov/c/github/dksmiffs/importable.svg)](https://codecov.io/gh/dksmiffs/importable)
+[![image](https://img.shields.io/codacy/grade/d02f4f80df0445738821c692f4bbe16f.svg)](https://app.codacy.com/project/dksmiffs/importable/dashboard)
 
 Demonstrate the pieces needed to publish an importable Python package to [TestPyPi][1].
 
