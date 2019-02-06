@@ -6,12 +6,12 @@
 Demonstrate the pieces needed to publish an importable Python package to [TestPyPi][1].
 
 ## Publish Guidance
-1. Follow [these steps][2] before installing Python packages.
-1. Update version in setup.py per [semantic versioning][3] guidance.
-1. Git commit, tag, & push all desired edits for release.
-1. Create a new release in GitHub to mirror your new version.
-1. [Generate distribution archives][4] for your package.
-1. [Upload your package][5] to TestPyPi.
+1.  Follow [these steps][2] before installing Python packages.
+2.  Update version in setup.py per [semantic versioning][3] guidance.
+3.  Git commit, tag, & push all desired edits for release.
+4.  Create a new release in GitHub to mirror your new version.
+5.  [Generate distribution archives][4] for your package.
+6.  [Upload your package][5] to TestPyPi.
 
 [1]: https://test.pypi.org/
 [2]: https://packaging.python.org/tutorials/installing-packages/#requirements-for-installing-packages
