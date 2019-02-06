@@ -5,3 +5,4 @@ dist
 importable.egg-info
 __pycache__
 *.swp
+venv_*
