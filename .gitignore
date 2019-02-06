@@ -1,5 +1,7 @@
-*.swp
-__pycache__
 build
+.coverage
+coverage.xml
 dist
 importable.egg-info
+__pycache__
+*.swp

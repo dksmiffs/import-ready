@@ -1,8 +1,9 @@
 [![image](https://img.shields.io/github/license/dksmiffs/importable.svg)](https://github.com/dksmiffs/importable)
 [![image](https://img.shields.io/github/release/dksmiffs/importable.svg)](https://github.com/dksmiffs/importable/releases)
 [![image](https://img.shields.io/travis/dksmiffs/importable.svg)](https://travis-ci.org/dksmiffs/importable)
+[![image](https://img.shields.io/codecov/c/github/dksmiffs/importable.svg)](https://codecov.io/gh/dksmiffs/importable)
 
-importable demonstrate the pieces needed to publish an importable Python package to [TestPyPi][1].
+Demonstrate the pieces needed to publish an importable Python package to [TestPyPi][1].
 
 ## Publish Guidance
 1. Follow [these steps][2] before installing Python packages.
