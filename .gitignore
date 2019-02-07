@@ -2,7 +2,7 @@ build
 .coverage
 coverage.xml
 dist
-importable.egg-info
+*.egg-info
 __pycache__
 *.swp
 venv_*

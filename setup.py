@@ -1,5 +1,5 @@
 """
-Describe the importable module distribution to the Distutils, per the following:
+Describe the import_ready module distro to the Distutils, per the following:
     https://docs.python.org/3/distutils/setupscript.html
 """
 from os import path
@@ -11,12 +11,12 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
     LONG_DESCRIPTION = f.read()
 
 setup(
-    name='importable',
-    version='0.6.0',
+    name='import_ready',
+    version='0.7.0',
     description='A simple importable Python package',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
-    url='https://gitlab.com/dave.k.smith/importable',
+    url='https://gitlab.com/dave.k.smith/import_ready',
     author='Dave Smith',
     author_email='dave.k.smith@gmail.com',
     classifiers=[
