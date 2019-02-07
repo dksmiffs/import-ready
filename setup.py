@@ -12,7 +12,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='importable',
-    version='0.5.0',
+    version='0.6.0',
     description='A simple importable Python package',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
@@ -20,12 +20,14 @@ setup(
     author='Dave Smith',
     author_email='dave.k.smith@gmail.com',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: MIT License',
         'License :: OSI Approved :: MIT License',
+        'Natural Language :: English',
+        'Programming Language :: Python :: 3.7',
     ],
-    keywords='import package huntsville havoc testpypi',
+    keywords='import package huntsville havoc testpypi travisci pytest codecov codacy',
     packages=find_packages(),
 )
