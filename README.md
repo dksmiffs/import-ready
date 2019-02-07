@@ -1,10 +1,10 @@
-[![image](https://img.shields.io/github/license/dksmiffs/import_ready.svg)](https://github.com/dksmiffs/import_ready)
-[![image](https://img.shields.io/github/release/dksmiffs/import_ready.svg)](https://github.com/dksmiffs/import_ready/releases)
-[![image](https://img.shields.io/travis/dksmiffs/import_ready.svg)](https://travis-ci.org/dksmiffs/import_ready)
-[![image](https://img.shields.io/codecov/c/github/dksmiffs/import_ready.svg)](https://codecov.io/gh/dksmiffs/import_ready)
-[![image](https://img.shields.io/codacy/grade/d02f4f80df0445738821c692f4bbe16f.svg)](https://app.codacy.com/project/dksmiffs/import_ready/dashboard)
+[![image](https://img.shields.io/github/license/dksmiffs/import-ready.svg)](https://github.com/dksmiffs/import-ready)
+[![image](https://img.shields.io/github/release/dksmiffs/import-ready.svg)](https://github.com/dksmiffs/import-ready/releases)
+[![image](https://img.shields.io/travis/dksmiffs/import-ready.svg)](https://travis-ci.org/dksmiffs/import-ready)
+[![image](https://img.shields.io/codecov/c/github/dksmiffs/import-ready.svg)](https://codecov.io/gh/dksmiffs/import-ready)
+[![image](https://img.shields.io/codacy/grade/d02f4f80df0445738821c692f4bbe16f.svg)](https://app.codacy.com/project/dksmiffs/import-ready/dashboard)
 
-Demonstrate the pieces needed to publish an importable Python package to [TestPyPi][1].  Inside import\_ready is a package called 'huntsville\_havoc' that divulges a couple of historical secrets that most diehard SPHL [Huntsville Havoc][6] fans don't know.
+Demonstrate the pieces needed to publish an importable Python package to [TestPyPi][1].  Inside import-ready is a package called 'huntsville\_havoc' that divulges a couple of historical secrets that most diehard SPHL [Huntsville Havoc][6] fans don't know.
 
 ## Publish Guidance
 1.  Follow [these steps][2] before installing Python packages.
