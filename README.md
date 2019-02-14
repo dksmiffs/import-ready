@@ -19,12 +19,12 @@ Follow these general suggestions to publish your own Python package to TestPyPI:
 _import-ready_ contains two types of tests, both contained under the top level `tests` directory:
 1.  **Unit tests**:  These are development time (pre-publish) tests. Run as follows from the top level directory:
 ```bash
-$ python -m pytest tests/local
+python -m pytest tests/local
 ```
 2.  **Package tests**:  These are post-publish tests, importing _import-ready_ itself back from TestPyPI. Run as follows from the `tests/TestPyPI` directory in a clean venv:
 ```bash
-$ python -m pip install -r requirements_TestPyPI.txt
-$ python -m pytest
+python -m pip install -r requirements_TestPyPI.txt
+python -m pytest
 ```
 
 [1]: https://test.pypi.org/
