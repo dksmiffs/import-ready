@@ -4,19 +4,28 @@
 [![image](https://img.shields.io/codecov/c/github/dksmiffs/import-ready.svg)](https://codecov.io/gh/dksmiffs/import-ready)
 [![image](https://img.shields.io/codacy/grade/d02f4f80df0445738821c692f4bbe16f.svg)](https://app.codacy.com/project/dksmiffs/import-ready/dashboard)
 
-Demonstrate the pieces needed to publish an importable Python package to [TestPyPI][1].  Inside import-ready is a package called 'huntsville\_havoc' that divulges a couple of historical secrets that most diehard SPHL [Huntsville Havoc][6] fans don't know.
+Demonstrate the pieces needed to publish an importable Python package to [TestPyPI][1].  Inside import-ready is a package called `huntsville\_havoc` that divulges a couple of historical secrets that most diehard SPHL [Huntsville Havoc][6] fans don't know.
 
 ## Publish Guidance
-1.  Follow [these steps][2] before installing Python packages.
+Follow these general suggestions to publish your own Python package to TestPyPI:
+1.  [Prepare your environment][2] before installing Python packages.
 2.  Update version in setup.py per [semantic versioning][3] guidance.
 3.  Git commit, tag, & push all desired edits for release.
 4.  Create a new release in GitHub to mirror your new version.
 5.  [Generate distribution archives][4] for your package.
 6.  [Upload your package][5] to TestPyPI.
 
-## Testing
-1.  'origins\_test.py' file under 'huntsville\_havoc' demonstrates package developer/internal unit testing, using pytest.
-2.  The top level 'tests' directory demonstrates external usage of this package via TestPyPI, again using pytest.
+## Testing import-ready
+import-ready contains two types of tests, each one a subdirectory of the top level `tests` directory:
+1.  **Unit tests**:  These are development time (pre-publish) tests. Run as follows from the top level directory:
+```bash
+python -m pytest tests/local
+```
+2.  **Package tests**:  These are post-publish tests, importing import-ready itself back from TestPyPI. Run as follows from the `tests/TestPyPI` directory in a clean venv:
+```bash
+python -m pip install -r requirements_TestPyPI.txt
+python -m pytest
+```
 
 [1]: https://test.pypi.org/
 [2]: https://packaging.python.org/tutorials/installing-packages/#requirements-for-installing-packages

@@ -1,5 +1,5 @@
 """ pytest unit tests for the origins module"""
-from . import origins
+from huntsville_havoc import origins
 
 def test_founder():
     """ unit test origins.founder """
