@@ -12,7 +12,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='import-ready',
-    version='0.7.2',
+    version='0.8.0',
     description='A simple importable Python package',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
