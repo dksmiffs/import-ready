@@ -12,7 +12,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='import-ready',
-    version='0.8.0',
+    version='0.9.0',
     description='A simple importable Python package',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
@@ -20,7 +20,7 @@ setup(
     author='Dave Smith',
     author_email='dave.k.smith@gmail.com',
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 1 - Planning',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: MIT License',
