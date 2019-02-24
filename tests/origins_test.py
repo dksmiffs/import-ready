@@ -7,10 +7,10 @@ def test_founder():
     names = who.split()
     first = names[0]
     last = names[1]
-    assert first == 'Rick'
-    assert last == 'Hovac'
+    assert first == 'Rick' # nosec
+    assert last == 'Hovac' # nosec
 
 def test_established():
     """unit test Origins.established"""
     when = Origins.established()
-    assert when[:8] == 'Not 2004'
+    assert when[:8] == 'Not 2004' # nosec
