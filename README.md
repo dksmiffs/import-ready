@@ -4,10 +4,10 @@
 [![image](https://img.shields.io/codecov/c/github/dksmiffs/import-ready.svg)](https://codecov.io/gh/dksmiffs/import-ready)
 [![image](https://img.shields.io/codacy/grade/d02f4f80df0445738821c692f4bbe16f.svg)](https://app.codacy.com/project/dksmiffs/import-ready/dashboard)
 
-Demonstrate the pieces needed to publish an importable Python package to [TestPyPI][1].  Inside _import-ready_ is a package called `huntsville_havoc` that divulges a couple of historical secrets that most diehard SPHL [Huntsville Havoc][6] fans don't know.
+Demonstrate the pieces needed to publish an importable Python package to [TestPyPI][1].  Inside _import-ready_ is a package called `huntsville_havoc` that divulges a couple of bona fide secrets that most diehard SPHL [Huntsville Havoc][6] fans don't know.
 
 ## Publish Guidance
-Follow these general suggestions to publish your own Python package to TestPyPI:
+Follow these general suggestions to publish your Python package to TestPyPI:
 1.  [Prepare your environment][2] before installing Python packages.
 2.  Update version in setup.py per [semantic versioning][3] guidance.
 3.  Git commit, tag, & push all desired edits for release.
@@ -16,7 +16,7 @@ Follow these general suggestions to publish your own Python package to TestPyPI:
 6.  [Upload your package][5] to TestPyPI.
 
 ## Testing _import-ready_
-_import-ready_ can be tested from two different perspectives:
+Test _import-ready_ from two different perspectives:
 <ol>
   <li><strong>Unit tests</strong>:  Development time, pre-publish tests. Run as follows from the top level directory in a clean venv:
 <pre>python -m pip install -r requirements_travis_ci.txt
