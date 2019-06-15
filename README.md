@@ -11,7 +11,7 @@ Inside _import-ready_ is a package called `huntsville_havoc` that divulges a cou
 ## Publish to TestPyPI
 Follow these general suggestions to publish your Python package to TestPyPI:
 1.  [Prepare your environment][2] before installing Python packages.
-2.  Update version in setup.py per [semantic versioning][3] guidance.
+2.  Update version in setup.py per [semantic versioning][3] guidance. Match this version in the `tests/requirements_test_*.txt` files used below.
 3.  Git commit, tag, & push all desired edits for release.
 4.  Create a new release in GitHub to mirror your new version.
 5.  [Generate distribution archives][4] for your package.
@@ -22,10 +22,10 @@ Test _import-ready_ from two different perspectives:
 <ol>
   <li><strong>Unit tests</strong>:  Development time, pre-publish test. Run as follows from the top level directory in a clean venv:
 <pre>python -m pip install -r requirements_travis_ci.txt
-python -m pytest tests</pre></li>
+python -m pytest -s tests</pre></li>
   <li><strong>Package tests</strong>:  Post-publish test, importing <em>import-ready</em> itself back from TestPyPI. Run as follows from inside the <code>tests</code> directory in a clean venv:
 <pre>python -m pip install -r requirements_test_TestPyPI.txt
-python -m pytest</pre></li>
+python -m pytest -s</pre></li>
 </ol>
 
 ## Publish to PyPI
@@ -34,7 +34,7 @@ After completing the above steps, [upload your package][9] to PyPI.
 ## Test the real deal
 Post-publish test, importing <em>import-ready</em> itself back from PyPI.  Run as follows from inside the <code>tests</code> directory in a clean venv:
 <pre>python -m pip install -r requirements_test_PyPI.txt
-python -m pytest</pre></li>
+python -m pytest -s</pre></li>
 
 [1]: https://test.pypi.org/
 [2]: https://packaging.python.org/tutorials/installing-packages/#requirements-for-installing-packages
