@@ -1,7 +1,7 @@
 # import-ready
 [![image](https://img.shields.io/github/license/dksmiffs/import-ready.svg)](https://github.com/dksmiffs/import-ready)
 [![image](https://img.shields.io/github/release/dksmiffs/import-ready.svg)](https://github.com/dksmiffs/import-ready/releases)
-[![image](https://img.shields.io/pypi/v/import-ready.svg)](https://pypi.org/project/import-ready)
+[![image](https://img.shields.io/pypi/v/import-ready.svg)](https://pypi.org/project/import-ready/)
 [![image](https://img.shields.io/travis/dksmiffs/import-ready.svg)](https://travis-ci.org/dksmiffs/import-ready)
 [![image](https://img.shields.io/codecov/c/github/dksmiffs/import-ready.svg)](https://codecov.io/gh/dksmiffs/import-ready)
 [![image](https://img.shields.io/codacy/grade/d02f4f80df0445738821c692f4bbe16f.svg)](https://app.codacy.com/project/dksmiffs/import-ready/dashboard)
@@ -38,12 +38,19 @@ Post-publish test, importing <em>import-ready</em> itself back from PyPI.  Run a
 <pre>python -m pip install -r requirements_test_PyPI.txt
 python -m pytest -s</pre></li>
 
+## [Thanks][11]
+
+## License
+[MIT][10].
+
 [1]: https://test.pypi.org/
 [2]: https://packaging.python.org/tutorials/installing-packages/#requirements-for-installing-packages
 [3]: https://semver.org/
 [4]: https://packaging.python.org/tutorials/packaging-projects/#generating-distribution-archives
 [5]: https://packaging.python.org/tutorials/packaging-projects/#uploading-the-distribution-archives
-[6]: http://huntsvillehavoc.com
+[6]: http://huntsvillehavoc.com/view/huntsvillehavoc
 [7]: https://pypi.org/
 [8]: https://github.com/dksmiffs/import-ready/issues
 [9]: https://packaging.python.org/tutorials/packaging-projects/#next-steps
+[10]: https://gitlab.com/dave.k.smith/import-ready/raw/master/LICENSE
+[11]: https://github.com/dksmiffs/import-ready/blob/master/THANKS.md
