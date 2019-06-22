@@ -8,5 +8,5 @@ to the import-ready project:
 
 [1]: https://github.com/matiassingers/awesome-readme
 [2]: https://github.com/dkhamsing/awesome_bot
-[3]: https://stackoverflow.com/questions/27644586/how-to-set-up-travis-ci-with-multiple-languages/44054333#44054333
-[4]: https://stackoverflow.com/a/44054333/
+[3]: https://stackoverflow.com/users/2035869/codiak
+[4]: https://stackoverflow.com/questions/27644586/how-to-set-up-travis-ci-with-multiple-languages/44054333#44054333
