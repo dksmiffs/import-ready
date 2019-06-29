@@ -30,7 +30,7 @@ python -m pytest -s tests</pre>
 ## Test the TestPyPI Published Package
 Run as follows from some random directory (to prove to yourself you're not "cheating" with some locally obtained _import-ready_) in another clean venv with [pip-tools][12] installed:
 <pre>
-cp &lt;path to import-ready&gt;/tests/origins&un;test.py .
+cp &lt;path to import-ready&gt;/tests/origins_test.py .
 cp &lt;path to import-ready&gt;/tests/pubtest-requirements.in .
 python -m piptools compile --generate-hashes pubtest-requirements.in
 dos2unix pubtest-requirements.txt
@@ -43,7 +43,7 @@ After completing the above steps, [upload your package][9] to PyPI.
 ## Test the real deal
 Post-publish test, importing _import-ready_ itself back from PyPI.  Run as follows from some other random directory (same reason as for TestPyPI testing above) in _yet another_ clean venv with [pip-tools][12] installed:
 <pre>
-cp &lt;path to import-ready&gt;/tests/origins&un;test.py .
+cp &lt;path to import-ready&gt;/tests/origins_test.py .
 cp &lt;path to import-ready&gt;/setup.py .
 python -m piptools compile --generate-hashes
 dos2unix requirements.txt
