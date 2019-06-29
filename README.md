@@ -10,33 +10,45 @@ This repository demonstrates steps needed to publish an importable Python packag
 
 Inside _import-ready_ is a package called `huntsville_havoc` that divulges a couple of bona fide secrets that most diehard SPHL [Huntsville Havoc][6] fans don't know.
 
-## Publish to TestPyPI
-Follow these general suggestions to publish your Python package to TestPyPI:
+## Prepare the Package
 1.  [Prepare your environment][2] before installing Python packages.
-2.  Update version in setup.py per [semantic versioning][3] guidance. Match this version in the `tests/requirements_test_*.txt` files used below.
-3.  Git commit, tag, & push all desired edits for release.
-4.  Create a new release in GitHub to mirror your new version.
-5.  [Generate distribution archives][4] for your package.
-6.  [Upload your package][5] to TestPyPI.
+2.  Update version in setup.py per [semantic versioning][3] guidance.
 
-## Test _import-ready_
-Test _import-ready_ from two different perspectives:
-<ol>
-  <li><strong>Unit tests</strong>:  Development time, pre-publish test. Run as follows from the top level directory in a clean venv:
-<pre>python -m pip install -r requirements_travis_ci.txt
-python -m pytest -s tests</pre></li>
-  <li><strong>Package tests</strong>:  Post-publish test, importing <em>import-ready</em> itself back from TestPyPI. Run as follows from inside the <code>tests</code> directory in a clean venv:
-<pre>python -m pip install -r requirements_test_TestPyPI.txt
-python -m pytest -s</pre></li>
-</ol>
+## Test in Development Environment
+Run as follows from the top level directory in a clean venv with [pip-tools][12] installed:
+<pre>python -m piptools compile --generate-hashes --allow-unsafe dev-requirements.in
+dos2unix dev-requirements.txt
+python -m pip install -r dev-requirements.txt
+python -m pytest -s tests</pre>
+
+## Publish to TestPyPI
+1.  Git commit, tag, & push all desired edits for release.
+2.  Create a new release in GitHub to mirror your new version.
+3.  [Generate distribution archives][4] for your package.
+4.  [Upload your package][5] to TestPyPI.
+
+## Test the TestPyPI Published Package
+Run as follows from some random directory (to prove to yourself you're not "cheating" with some locally obtained _import-ready_) in another clean venv with [pip-tools][12] installed:
+<pre>
+cp &lt;path to import-ready&gt;/tests/origins&un;test.py .
+cp &lt;path to import-ready&gt;/tests/pubtest-requirements.in .
+python -m piptools compile --generate-hashes pubtest-requirements.in
+dos2unix pubtest-requirements.txt
+python -m pip install -r pubtest-requirements.txt
+python -m pytest -s</pre>
 
 ## Publish to PyPI
 After completing the above steps, [upload your package][9] to PyPI.
 
 ## Test the real deal
-Post-publish test, importing <em>import-ready</em> itself back from PyPI.  Run as follows from inside the <code>tests</code> directory in a clean venv:
-<pre>python -m pip install -r requirements_test_PyPI.txt
-python -m pytest -s</pre></li>
+Post-publish test, importing _import-ready_ itself back from PyPI.  Run as follows from some other random directory (same reason as for TestPyPI testing above) in _yet another_ clean venv with [pip-tools][12] installed:
+<pre>
+cp &lt;path to import-ready&gt;/tests/origins&un;test.py .
+cp &lt;path to import-ready&gt;/setup.py .
+python -m piptools compile --generate-hashes
+dos2unix requirements.txt
+python -m pip install -r requirements.txt
+python -m pytest -s</pre>
 
 ## [Thanks][11]
 
@@ -54,3 +66,4 @@ python -m pytest -s</pre></li>
 [9]: https://packaging.python.org/tutorials/packaging-projects/#next-steps
 [10]: https://gitlab.com/dave.k.smith/import-ready/raw/master/LICENSE
 [11]: https://github.com/dksmiffs/import-ready/blob/master/THANKS.md
+[12]: https://github.com/jazzband/pip-tools

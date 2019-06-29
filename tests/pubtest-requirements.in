@@ -1,0 +1,4 @@
+# requirements for testing the TestPyPI published package
+--extra-index-url https://test.pypi.org/simple
+import-ready
+pytest
