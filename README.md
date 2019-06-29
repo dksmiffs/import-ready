@@ -44,10 +44,10 @@ After completing the above steps, [upload your package][9] to PyPI.
 Post-publish test, importing _import-ready_ itself back from PyPI.  Run as follows from some other random directory (same reason as for TestPyPI testing above) in _yet another_ clean venv with [pip-tools][12] installed:
 <pre>
 cp &lt;path to import-ready&gt;/tests/origins_test.py .
-cp &lt;path to import-ready&gt;/setup.py .
-python -m piptools compile --generate-hashes
-dos2unix requirements.txt
-python -m pip install -r requirements.txt
+cp &lt;path to import-ready&gt;/tests/pub-requirements.in .
+python -m piptools compile --generate-hashes pub-requirements.in
+dos2unix pub-requirements.txt
+python -m pip install -r pub-requirements.txt
 python -m pytest -s</pre>
 
 ## [Thanks][11]
