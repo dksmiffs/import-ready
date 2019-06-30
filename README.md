@@ -36,7 +36,7 @@ python -m pytest -s</pre>
 After completing the above steps, [upload your package][9] to PyPI.
 
 ## Test the real deal
-Test by importing _import-ready_ itself back from PyPI.  Run same as for the TestPyPI case (except this time with `pub-requirements.in/.txt`) from the `test` directory in _yet another_ clean venv with [pip-tools][12] installed.
+Test by importing _import-ready_ itself back from PyPI.  Run same as for the TestPyPI case (except this time with `pub-requirements.in/.txt`) from the `tests` directory in _yet another_ clean venv with [pip-tools][12] installed.
 
 ## [Thanks][11]
 
