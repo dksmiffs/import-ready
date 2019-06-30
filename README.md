@@ -27,7 +27,7 @@ python -m pytest -s tests</pre>
 4.  [Upload your package][5] to TestPyPI.
 
 ## Test the TestPyPI Published Package
-Run as follows from the `test` directory in another clean venv with [pip-tools][12] installed:
+Run as follows from the `tests` directory in another clean venv with [pip-tools][12] installed:
 <pre>python -m piptools compile --generate-hashes pubtest-requirements.in
 python -m pip install -r pubtest-requirements.txt
 python -m pytest -s</pre>
