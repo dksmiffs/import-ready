@@ -41,7 +41,7 @@ Test by importing _import-ready_ itself back from PyPI.  Run same as for the Tes
 ## [Thanks][11]
 
 ## License
-[MIT][10].
+[MIT][10]
 
 [1]: https://test.pypi.org/
 [2]: https://packaging.python.org/tutorials/installing-packages/#requirements-for-installing-packages
