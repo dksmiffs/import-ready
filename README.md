@@ -17,7 +17,6 @@ Inside _import-ready_ is a package called `huntsville_havoc` that divulges a cou
 ## Test in Development Environment
 Run as follows from the top level directory in a clean venv with [pip-tools][12] installed:
 <pre>python -m piptools compile --generate-hashes --allow-unsafe dev-requirements.in
-dos2unix dev-requirements.txt
 python -m pip install -r dev-requirements.txt
 python -m pytest -s tests</pre>
 
@@ -28,12 +27,8 @@ python -m pytest -s tests</pre>
 4.  [Upload your package][5] to TestPyPI.
 
 ## Test the TestPyPI Published Package
-Run as follows from some random directory (to prove to yourself you're not "cheating" with some locally obtained _import-ready_) in another clean venv with [pip-tools][12] installed:
-<pre>
-cp &lt;path to import-ready&gt;/tests/origins_test.py .
-cp &lt;path to import-ready&gt;/tests/pubtest-requirements.in .
-python -m piptools compile --generate-hashes pubtest-requirements.in
-dos2unix pubtest-requirements.txt
+Run as follows from the `test` directory in another clean venv with [pip-tools][12] installed:
+<pre>python -m piptools compile --generate-hashes pubtest-requirements.in
 python -m pip install -r pubtest-requirements.txt
 python -m pytest -s</pre>
 
@@ -41,14 +36,7 @@ python -m pytest -s</pre>
 After completing the above steps, [upload your package][9] to PyPI.
 
 ## Test the real deal
-Post-publish test, importing _import-ready_ itself back from PyPI.  Run as follows from some other random directory (same reason as for TestPyPI testing above) in _yet another_ clean venv with [pip-tools][12] installed:
-<pre>
-cp &lt;path to import-ready&gt;/tests/origins_test.py .
-cp &lt;path to import-ready&gt;/tests/pub-requirements.in .
-python -m piptools compile --generate-hashes pub-requirements.in
-dos2unix pub-requirements.txt
-python -m pip install -r pub-requirements.txt
-python -m pytest -s</pre>
+Test by importing _import-ready_ itself back from PyPI.  Run same as for the TestPyPI case (except this time with `pub-requirements.in/.txt`) from the `test` directory in _yet another_ clean venv with [pip-tools][12] installed.
 
 ## [Thanks][11]
 
