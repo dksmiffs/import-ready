@@ -16,7 +16,8 @@ Inside _import-ready_ is a package called `huntsville_havoc` that divulges a cou
 
 ## Test in Development Environment
 Run as follows from the top level directory in a clean venv with [pip-tools][12] installed:
-<pre>python -m piptools compile --generate-hashes --allow-unsafe dev-requirements.in
+<pre>python -m piptools compile --upgrade --generate-hashes --allow-unsafe dev-requirements.in
+python -m piptools sync dev-requirements.txt
 python -m pip install -r dev-requirements.txt
 python -m pytest -s tests</pre>
 
