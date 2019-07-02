@@ -1,4 +1,6 @@
 """The history contained herein is true"""
+
+
 class Origins():
     """Divulge Havoc historical secrets"""
 

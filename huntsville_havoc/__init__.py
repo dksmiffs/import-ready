@@ -1,2 +1,2 @@
 """Specify which modules to export from the package."""
-from .origins import Origins
+from .origins import Origins  # noqa: F401

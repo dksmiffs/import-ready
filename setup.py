@@ -12,7 +12,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='import-ready',
-    version='0.10.4',
+    version='0.11.0',
     description='A simple importable Python package',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
@@ -27,7 +27,8 @@ setup(
         'Natural Language :: English',
         'Programming Language :: Python :: 3.7',
     ],
-    keywords='import package huntsville havoc testpypi travisci pytest codecov codacy',
+    keywords=('import package huntsville havoc testpypi travisci pytest '
+              'codecov codacy'),
     packages=find_packages(),
     license='MIT',
     zip_safe=False,

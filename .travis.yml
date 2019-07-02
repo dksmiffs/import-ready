@@ -8,6 +8,9 @@ matrix:
         - python -m pip install -r dev-requirements.txt
       script:
         - python -m pytest --cov=huntsville_havoc tests
+        - python -m flake8 --count huntsville_havoc/
+        - python -m flake8 --count setup.py
+        - python -m flake8 --count tests/origins_test.py
       after_success:
         - bash <(curl -s https://codecov.io/bash)
 
