@@ -27,7 +27,7 @@ python -m pytest -s tests</pre>
 4.  [Upload your package][5] to TestPyPI.
 
 ## Test the TestPyPI Published Package
-Run as follows from the `tests` directory in another clean venv with [pip-tools][12] installed:
+Run as follows from the `tests` directory in another clean venv with [pip-tools][12] installed (_note the `piptools sync` step isn't working right now because of upstream issue [pip-tools #638][13]_):
 <pre>python -m piptools compile --upgrade --generate-hashes pubtest-requirements.in
 python -m piptools sync pubtest-requirements.txt
 python -m pytest -s</pre>
@@ -55,3 +55,4 @@ Test by importing _import-ready_ itself back from PyPI.  Run same as for the Tes
 [10]: https://gitlab.com/dave.k.smith/import-ready/raw/master/LICENSE
 [11]: https://github.com/dksmiffs/import-ready/blob/master/THANKS.md
 [12]: https://github.com/jazzband/pip-tools
+[13]: https://github.com/jazzband/pip-tools/issues/638
