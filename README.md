@@ -17,7 +17,6 @@ Inside _import-ready_ is a package called `huntsville_havoc` that divulges a cou
 ## Test in Development Environment
 Run as follows from the top level directory in a clean venv with [pip-tools][12] installed:
 <pre>python -m piptools compile --upgrade --generate-hashes --allow-unsafe dev-requirements.in
-python -m pip install -r dev-requirements.txt
 python -m piptools sync dev-requirements.txt
 python -m pytest -s tests</pre>
 
@@ -30,7 +29,6 @@ python -m pytest -s tests</pre>
 ## Test the TestPyPI Published Package
 Run as follows from the `tests` directory in another clean venv with [pip-tools][12] installed:
 <pre>python -m piptools compile --upgrade --generate-hashes pubtest-requirements.in
-python -m pip install -r pubtest-requirements.txt
 python -m piptools sync pubtest-requirements.txt
 python -m pytest -s</pre>
 
