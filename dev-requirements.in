@@ -2,4 +2,3 @@
 flake8      # Python style guide enforcement - http://flake8.pycqa.org
 pytest      # Python testing tool            - https://pytest.org
 pytest-cov  # Coverage plugin for pytest     - https://github.com/pytest-dev/pytest-cov
-twine       # Publishing packages on PyPI    - https://twine.readthedocs.io

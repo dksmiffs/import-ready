@@ -16,7 +16,7 @@ Inside _import-ready_ is a package called `huntsville_havoc` that divulges a cou
 
 ## Test in Development Environment
 Run as follows from the top level directory in a clean venv with [pip-tools][12] installed:
-<pre>python -m piptools compile --upgrade --generate-hashes --allow-unsafe dev-requirements.in
+<pre>python -m piptools compile --upgrade --generate-hashes dev-requirements.in
 python -m piptools sync dev-requirements.txt
 python -m pytest -s tests</pre>
 
@@ -27,16 +27,16 @@ python -m pytest -s tests</pre>
 4.  [Upload your package][5] to TestPyPI.
 
 ## Test the TestPyPI Published Package
-Run as follows from the `tests` directory in another clean venv with [pip-tools][12] installed (_note the `piptools sync` step isn't working right now because of upstream issue [pip-tools #638][13]_):
-<pre>python -m piptools compile --upgrade --generate-hashes pubtest-requirements.in
-python -m piptools sync pubtest-requirements.txt
+Run as follows from the `tests` directory in another clean venv with [pip-tools][12] installed:
+<pre>python -m piptools compile --upgrade --generate-hashes pub-requirements.in
+python -m piptools sync --extra-index-url https://test.pypi.org/simple pub-requirements.txt
 python -m pytest -s</pre>
 
 ## Publish to PyPI
 After completing the above steps, [upload your package][9] to PyPI.
 
 ## Test the real deal
-Test by importing _import-ready_ itself back from PyPI.  Run same as for the TestPyPI case (except this time with `pub-requirements.in/.txt`) from the `tests` directory in _yet another_ clean venv with [pip-tools][12] installed.
+Test by importing _import-ready_ itself back from PyPI.  Run same as for the TestPyPI case (except this time with the `--extra-index-url` option removed) from the `tests` directory in _yet another_ clean venv with [pip-tools][12] installed.
 
 ## [Thanks][11]
 
