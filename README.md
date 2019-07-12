@@ -28,8 +28,11 @@ python -m pytest -s tests</pre>
 
 ## Test the TestPyPI-Published Package
 Run as follows from the `tests` directory in another clean venv with [pip-tools][12] installed:
-<pre>python -m piptools compile --upgrade --generate-hashes --extra-index-url https://test.pypi.org/simple/ --output-file testpypi-requirements.txt pub-requirements.in
-python -m piptools sync --extra-index-url https://test.pypi.org/simple/ testpypi-requirements.txt
+<pre>python -m piptools compile --upgrade --generate-hashes \
+      --extra-index-url https://test.pypi.org/simple/ \
+      --output-file testpypi-requirements.txt pub-requirements.in
+python -m piptools sync --extra-index-url https://test.pypi.org/simple/ \
+      testpypi-requirements.txt
 python -m pytest -s</pre>
 
 ## Publish to PyPI
@@ -37,7 +40,8 @@ After passing the above tests, [upload your package][9] to PyPI.
 
 ## Test the PyPI-Published Package
 Run as follows from the `tests` directory in _yet another_ clean venv with [pip-tools][12] installed:
-<pre>python -m piptools compile --upgrade --generate-hashes --output-file pypi-requirements.txt pub-requirements.in
+<pre>python -m piptools compile --upgrade --generate-hashes \
+      --output-file pypi-requirements.txt pub-requirements.in
 python -m piptools sync pypi-requirements.txt
 python -m pytest -s</pre>
 
