@@ -29,7 +29,7 @@ python -m pytest -s tests</pre>
 ## Test the TestPyPI Published Package
 Run as follows from the `tests` directory in another clean venv with [pip-tools][12] installed:
 <pre>python -m piptools compile --upgrade --generate-hashes pub-requirements.in
-python -m piptools sync --extra-index-url https://test.pypi.org/simple pub-requirements.txt
+python -m piptools sync --extra-index-url https://test.pypi.org/simple/ pub-requirements.txt
 python -m pytest -s</pre>
 
 ## Publish to PyPI
