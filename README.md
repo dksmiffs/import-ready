@@ -26,17 +26,19 @@ python -m pytest -s tests</pre>
 3.  [Generate distribution archives][4] for your package.
 4.  [Upload your package][5] to TestPyPI.
 
-## Test the TestPyPI Published Package
+## Test the TestPyPI-Published Package
 Run as follows from the `tests` directory in another clean venv with [pip-tools][12] installed:
 <pre>python -m piptools compile --upgrade --generate-hashes pub-requirements.in
 python -m piptools sync --extra-index-url https://test.pypi.org/simple/ pub-requirements.txt
 python -m pytest -s</pre>
 
 ## Publish to PyPI
-After completing the above steps, [upload your package][9] to PyPI.
+After passing the above tests, [upload your package][9] to PyPI.
 
-## Test the real deal
-Test by importing _import-ready_ itself back from PyPI.  Run same as for the TestPyPI case (except this time with the `--extra-index-url` option removed) from the `tests` directory in _yet another_ clean venv with [pip-tools][12] installed.
+## Test the PyPI-Published Package
+Run as follows from the `tests` directory in _yet another_ clean venv with [pip-tools][12] installed:
+<pre>python -m piptools sync pub-requirements.txt
+python -m pytest -s</pre>
 
 ## [Thanks][11]
 
