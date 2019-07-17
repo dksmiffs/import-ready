@@ -1,18 +1,18 @@
-Manual dependency license review, performed 2019-07-14:
+Manual dependency review, performed 2019-07-14:
 
 atomicwrites       - MIT
 attrs              - MIT
 colorama           - BSD-3-Clause
-coverage           - Apache License 2.0
+coverage           - Apache 2.0
 entrypoints        - MIT
 flake8             - MIT
-importlib-metadata - Apache License 2.0
-mccabe             - Expat License
+importlib-metadata - Apache 2.0
+mccabe             - Expat
 more-itertools     - MIT
 packaging          - either Apache or BSD
 pluggy             - MIT
 py                 - MIT
-pycodestyle        - Expat License
+pycodestyle        - Expat
 pyflakes           - MIT
 pyparsing          - MIT
 pytest-cov         - MIT
